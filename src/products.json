@@ -1,0 +1,42 @@
+{
+    "kategori": [
+        {
+            "id": 1,
+            "nama": "Steorofoam",
+            "slug": "steorofoam"
+        },
+        {
+            "id": 2,
+            "nama": "Plastik",
+            "slug": "plastik"
+        },
+        {
+            "id": 2,
+            "nama": "Plastik",
+            "slug": "plastik"
+        }
+    ],
+    "produk": [
+        {
+            "id": 1,
+            "nama": "Str Bubur",
+            "banyaknya": "1bal isi 100",
+            "harga": 25000,
+            "kategori_id": 1
+        },
+        {
+            "id": 2,
+            "nama": "Str kecil/mie sakura",
+            "banyaknya": "1bal isi 200",
+            "harga":44000,
+            "kategori_id": 1
+        },
+        {
+            "id": 3,
+            "nama": "Str mangkok",
+            "banyaknya": "1bal isi 100",
+            "harga":28000,
+            "kategori_id": 1
+        }
+    ]
+}
