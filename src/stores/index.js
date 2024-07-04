@@ -1,19 +1,44 @@
-import { createPinia } from "pinia";
-import { defineStore } from "pinia";
-import axios from "axios";
+import { defineStore } from 'pinia'
+import axios from 'axios'
 
-const pinia = createPinia();
-
-const useStore = defineStore("store", {
+export const useSheetDBStore = defineStore('sheetdb', {
   state: () => ({
     data: [],
+    categories: [],
+    search: '',
+    page: 1,
+    perPage: 10,
   }),
-  actions: {
-    async fetchData() {
-      const response = await axios.get("https://https://sheetdb.io/api/v1/kkknsizl0rqyp");
-      this.data = response.data;
+  getters: {
+    filteredData: (state) => {
+      return state.data.filter((item) => {
+        return item.category.includes(state.search) || item.name.includes(state.search)
+      })
+    },
+    paginatedData: (state) => {
+      const start = (state.page - 1) * state.perPage
+      const end = start + state.perPage
+      return state.filteredData.slice(start, end)
     },
   },
-});
+  actions: {
+    async fetchData() {
+      const response = await axios.get('https://sheetdb.io/api/v1/kkknsizl0rqyp')
+      this.data = response.data
+    },
+    async fetchCategories() {
+      const response = await axios.get('https://sheetdb.io/api/v1/kkknsizl0rqyp/categories')
+      this.categories = response.data
+    },
+    setSearch(search) {
+      this.search = search
+    },
+    setPage(page) {
+      this.page = page
+    },
+    setPerPage(perPage) {
+      this.perPage = perPage
+    },
+  },
+})
 
-export { pinia, useStore };

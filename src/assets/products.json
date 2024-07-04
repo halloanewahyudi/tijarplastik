@@ -1,0 +1,156 @@
+[
+    {
+      "category": "Styrofoam",
+      "name": "Str Bubur",
+      "amount": "1bal isi 100",
+      "price": "Rp25.000",
+      "merk": ""
+    },
+    {
+      "category": "Styrofoam",
+      "name": "Str mie/sakura",
+      "amount": "1bal isi 200",
+      "price": "Rp44.000",
+      "merk": ""
+    },
+    {
+      "category": "Styrofoam",
+      "name": "Str mangkok",
+      "amount": "1bal isi 100",
+      "price": "Rp28.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1kg (tomat)",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1/4kg (tomat)",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig Sambel / es mambo 4x23 (tomat)",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig Sambel / es mambo 6x10 (tomat)",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1kg (Bisbul)",
+      "amount": "1pak",
+      "price": "Rp5.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1/2kg (Bisbul)",
+      "amount": "1pak",
+      "price": "Rp5.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1/4kg panjang  (Bisbul)",
+      "amount": "1pak",
+      "price": "Rp5.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Benig 1/4kg pendek (Bisbul)",
+      "amount": "1pak",
+      "price": "Rp5.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Klip uk 5x8",
+      "amount": "1pak isi 100",
+      "price": "Rp3.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Klip uk 6x10",
+      "amount": "1pak isi 100",
+      "price": "Rp3.500",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Klip uk 7x10",
+      "amount": "1pak isi 100",
+      "price": "Rp5.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Klip uk 8x12",
+      "amount": "1pak isi 100",
+      "price": "Rp6.000",
+      "merk": ""
+    },
+    {
+      "category": "Plastik",
+      "name": "Plastik Klip uk 10x15",
+      "amount": "1pak isi 100",
+      "price": "Rp8.500",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Rambai Kecil",
+      "amount": "1pak",
+      "price": "Rp4.500",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Rambai Tanggung",
+      "amount": "1pak",
+      "price": "Rp4.500",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Tiger Kecil",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Tiger Tanggung",
+      "amount": "1pak",
+      "price": "Rp10.000",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Phyton Merah UK 28",
+      "amount": "1pak",
+      "price": "Rp13.000",
+      "merk": ""
+    },
+    {
+      "category": "Platik Kresek",
+      "name": "Kantong Cup",
+      "amount": "1pak",
+      "price": "Rp4.000",
+      "merk": ""
+    }
+  ]

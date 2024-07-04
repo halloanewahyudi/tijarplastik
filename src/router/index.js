@@ -1,15 +1,19 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-const routes = [
-  { 
-    path: '/', 
-    name: 'home', 
-    component: () => import('../views/HomePage.vue') 
-  }
-]
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component:() => import('../views/HomePage.vue')
+    },
+    {
+      path: '/product',
+      name: 'Product',
+      component:() => import('../views/ProductPage.vue')
+    }
+  ]
 })
 
 export default router
