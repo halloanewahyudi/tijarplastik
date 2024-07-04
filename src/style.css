@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
+
+.form-control{
+  @apply p-1  rounded-lg border text-primary
+}
+.form-group{
+  @apply flex flex-col gap-2;
+}
+.form-group label{
+  @apply text-sm italic;
+}
