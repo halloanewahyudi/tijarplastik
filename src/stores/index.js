@@ -31,15 +31,18 @@ export const useOrderStore = defineStore('order', {
         order.quantity--
       }
     },
+    
     updateOrder(order) {
       const index = this.orders.findIndex(o => o.id === order.id)
       if (index !== -1) {
         this.orders[index] = order
       }
     },
+
     getOrder(id) {
       return this.orders.find(order => order.id === id)
     },
+
     updateItemQuantity(item) {
       const order = this.orders.find(order => order.name === item.product.name)
       if (order) {

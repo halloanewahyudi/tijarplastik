@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .form-control{
-  @apply p-1 rounded-lg border text-primary;
+  @apply p-2 rounded-lg border text-primary;
 }
 .form-group{
   @apply flex flex-col gap-2;

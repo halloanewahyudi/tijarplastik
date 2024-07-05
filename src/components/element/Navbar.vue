@@ -13,7 +13,7 @@ const bukaOrders = ref(false);
         <div class="container">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="max-w-40">
-                    <Logo class="w-full h-full" />
+                    <Logo class="w-full h-full" @click="$router.push('/')" />
                 </div>
                 <div class="relative">
                     <button @click="bukaOrders = !bukaOrders" v-if="order.orders.length > 0"
@@ -32,14 +32,14 @@ const bukaOrders = ref(false);
     </div>
     <!-- popup orders -->
     <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:1528938069. -->
-    <div class="p-6 bg-primary fixed left-0 w-full min-h-full" v-if="bukaOrders">
+    <div class="p-6 bg-primary fixed left-0 w-full min-h-full z-50" v-if="bukaOrders">
         <div class="w-full flex justify-end">
             <button class="p-4" @click="bukaOrders = false">
                 <IconClose />
             </button>
         </div>
 
-        <div class="relative">
+        <div class="">
             <ul class="flex flex-col gap-2">
                 <li v-for="(item, index) in order.orders" :key="index" class="flex items-center justify-between gap-4">
                     <span>{{ item.name }}</span>
