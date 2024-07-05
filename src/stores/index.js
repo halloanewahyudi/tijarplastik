@@ -1,44 +1,55 @@
 import { defineStore } from 'pinia'
-import axios from 'axios'
 
-export const useSheetDBStore = defineStore('sheetdb', {
+export const useOrderStore = defineStore('order', {
   state: () => ({
-    data: [],
-    categories: [],
-    search: '',
-    page: 1,
-    perPage: 10,
+    orders: []
   }),
-  getters: {
-    filteredData: (state) => {
-      return state.data.filter((item) => {
-        return item.category.includes(state.search) || item.name.includes(state.search)
-      })
-    },
-    paginatedData: (state) => {
-      const start = (state.page - 1) * state.perPage
-      const end = start + state.perPage
-      return state.filteredData.slice(start, end)
-    },
-  },
   actions: {
-    async fetchData() {
-      const response = await axios.get('https://sheetdb.io/api/v1/kkknsizl0rqyp')
-      this.data = response.data
+    addOrder(order) {
+      this.orders.push(order)
     },
-    async fetchCategories() {
-      const response = await axios.get('https://sheetdb.io/api/v1/kkknsizl0rqyp/categories')
-      this.categories = response.data
+    removeOrder(orderId) {
+      this.orders = this.orders.filter(order => order.name !== orderId)
     },
-    setSearch(search) {
-      this.search = search
+    getTotalPrice() {
+      //  return this.orders.reduce((total, order) => total + order.price, 0)
+      // return this.orders.reduce((total, order) => total + parseInt(order.price), 0)
+       // return this.orders.reduce((total, order) => total + parseFloat(order.price), 0)
+     // return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp',"")), 0)
+   return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp', '').replace('.', '')), 0)
+   
     },
-    setPage(page) {
-      this.page = page
+    increaseQuantity(id) {
+      const order = this.orders.find(order => order.id === id)
+      if (order) {
+        order.quantity++
+      }
     },
-    setPerPage(perPage) {
-      this.perPage = perPage
+    decreaseQuantity(id) {
+      const order = this.orders.find(order => order.id === id)
+      if (order && order.quantity > 1) {
+        order.quantity--
+      }
     },
-  },
-})
+    updateOrder(order) {
+      const index = this.orders.findIndex(o => o.id === order.id)
+      if (index !== -1) {
+        this.orders[index] = order
+      }
+    },
+    getOrder(id) {
+      return this.orders.find(order => order.id === id)
+    },
+    updateItemQuantity(item) {
+      const order = this.orders.find(order => order.name === item.product.name)
+      if (order) {
+        order.quantity = item.quantity
+      }
+    },
 
+    clearOrders() {
+      this.orders = []
+    }
+    
+  }
+})

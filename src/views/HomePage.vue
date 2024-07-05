@@ -1,16 +1,29 @@
 <script setup>
 
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watchEffect } from 'vue';
 import IconNext from '../components/icons/IconNext.vue'
 import IconPrev from '../components/icons/IconPrev.vue'
-
 import DataProducts from '../assets/products.json'
+import { useOrderStore } from '../stores';
+import IconClose from '../components/icons/IconClose.vue';
+import Orderan from '../components/element/Orderan.vue';
+
+
+const order = useOrderStore();
+
 const products = ref(DataProducts);
 const category = ref('');
 const name = ref('');
 const price = ref('');
 const merk = ref('');
 const search = ref('');
+// popup show detail
+const showDetail = ref(false);
+const selectedItem = ref({});
+
+onMounted(() => {
+    products.value = DataProducts;
+});
 
 const filteredproducts = computed(() => {
     return products.value.filter(item => {
@@ -52,6 +65,17 @@ const nextPage = () => {
 const uniqueItems = [
     ...new Map(paginatedproducts.value.map(item => [item.category, item])).values()
 ];
+const pesan = () => {
+    order.addOrder(selectedItem.value)
+    setTimeout(() => {
+        showDetail.value = false;
+    }, 200);
+}
+watchEffect(() => {
+    currentPage.value = 1;
+    selectedItem.value = {};
+    
+});
 </script>
 <template>
     <div>
@@ -78,19 +102,30 @@ const uniqueItems = [
                 <li v-for="item in paginatedproducts" :key="item.phone"
                     class="p-2 rounded-lg flex justify-between items-center hover:bg-light">
                     <span>{{ item.name }}</span>
-                    <span class="bg-light text-white py-1 px-3 rounded-full">
-                        {{ item.price }}
-                    </span>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <span class="bg-light text-white py-1 px-3 rounded-full">
+                            {{ item.price }}
+                        </span>
+                        <button @click="selectedItem = item; showDetail = true"
+                            class="py-1 px-2 rounded-full bg-secondary"> Pesan </button>
+                    </div>
+
                 </li>
             </ul>
             <div class="flex gap-3 items-center justify-center py-6">
                 <button class="flex items-center gap-2" @click="prevPage" :disabled="currentPage === 1">
                     <IconPrev /> Kembali
                 </button>
-                <button class="flex items-center gap-2" @click="nextPage" :disabled="currentPage === totalPages">Selanjutnya
+                <button class="flex items-center gap-2" @click="nextPage"
+                    :disabled="currentPage === totalPages">Selanjutnya
                     <IconNext />
                 </button>
             </div>
         </div>
     </div>
+    <div v-if="showDetail">
+        <Orderan />
+    </div>
+
+    
 </template>

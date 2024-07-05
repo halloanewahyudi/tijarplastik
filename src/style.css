@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .form-control{
   @apply p-1 rounded-lg border text-primary;
 }
@@ -11,4 +10,8 @@
 }
 .form-group label{
   @apply text-sm italic;
+}
+
+body{
+padding-top:60px;
 }
