@@ -56,10 +56,10 @@ const uniqueItems = [
 <template>
     <div>
         <div class="border-b border-light mb-5">
-            <div class="container">
-                <div class="flex flex-wrap gap-3 py-5">
+            <div class="px-5">
+                <div class="flex justify-center gap-2 py-5">
                     <div class="form-group">
-                        <input type="search" v-model="search" placeholder="Cari Produk" class="form-control" />
+                        <input type="search" v-model="search" placeholder="Cari Produk" class="form-control " />
                     </div>
 
                     <div class="form-group ">
@@ -83,11 +83,11 @@ const uniqueItems = [
                     </span>
                 </li>
             </ul>
-            <div class="flex gap-3 items-center justify-center pt-10">
+            <div class="flex gap-3 items-center justify-center py-6">
                 <button class="flex items-center gap-2" @click="prevPage" :disabled="currentPage === 1">
-                    <IconPrev /> Previous
+                    <IconPrev /> Kembali
                 </button>
-                <button class="flex items-center gap-2" @click="nextPage" :disabled="currentPage === totalPages">Next
+                <button class="flex items-center gap-2" @click="nextPage" :disabled="currentPage === totalPages">Selanjutnya
                     <IconNext />
                 </button>
             </div>

@@ -4,7 +4,7 @@
 
 
 .form-control{
-  @apply p-1  rounded-lg border text-primary
+  @apply p-1 rounded-lg border text-primary shadow  w-full py-2 px-3  ;
 }
 .form-group{
   @apply flex flex-col gap-2;
