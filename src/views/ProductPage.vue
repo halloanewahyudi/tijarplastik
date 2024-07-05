@@ -21,8 +21,6 @@ const search = ref('');
   });
 }); 
 
-
-
 // Pagination logic
 const itemsPerPage = 12;
 const currentPage = ref(1);
@@ -55,8 +53,7 @@ const uniqueItems = [
 </script>
 <template>
  <div class="">
-    <div class="container py-16">
-      <h4>Daftar Anggota</h4>
+    <div class="container">
       <div class="flex flex-wrap gap-3 py-5">
         <div class="form-group">
           <label>Cari</label>
@@ -73,12 +70,13 @@ const uniqueItems = [
         </div>
       </div> <!-- end filter wrap -->
 
-      <ul class="flex flex-col divide-y divide-light text-sm">
+      <ul class="flex flex-col divide-y divide-light">
         <li v-for="item in paginatedproducts" :key="item.phone"
           class="p-2 rounded-lg flex justify-between items-center hover:bg-light">
           <span>{{ item.name }}</span>
-          <span>{{ item.price }}</span>
-      
+          <span class="bg-light text-white py-1 px-3 rounded-full">
+            {{ item.price }}
+        </span>
         </li>
       </ul>
    <div class="flex gap-3 items-center pt-10">
