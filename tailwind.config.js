@@ -13,8 +13,22 @@ export default {
       colors: {
         primary:'#024B43',
         secondary:'#FCA404',
-        light:'#10786f',
-        dark:'#022F2A'
+        dark:'#022F2A',
+        brand:{
+          1:`#004c45`,
+          2:'#dfe9c0',
+          3:'#e7f5f9',
+          4:'#003d3a'
+        },
+        light:'#f7ffd5',
+        borderlight:'#d9e3b9',
+        kuning:{
+          1:'#fcf300',
+          2:'#fdf97d',
+          3:'#FEFCBB',
+          4:'##f2ff86',
+        }
+
       }
     },
   },
