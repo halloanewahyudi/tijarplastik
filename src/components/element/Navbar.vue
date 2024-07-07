@@ -72,7 +72,7 @@ function sendMessage() {
                 <!-- <div class="max-w-40">
                     <Logo class="w-full h-full" @click="$router.push('/')" />
                 </div> -->
-                <router-link to="/" class="text-2xl text-light"> <span class="font-semibold">Tijar</span>Plastik</router-link>
+                <router-link to="/" class="text-2xl text-light" @click="product.category = ''"> <span class="font-semibold">Tijar</span>Plastik</router-link>
                 <div class="flex items-center gap-8">
                   <button @click="openSearch =! openSearch"><IconSearch  class="w-5 h-5 text-light"/></button>
                     <div class="relative">

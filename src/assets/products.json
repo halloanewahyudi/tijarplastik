@@ -147,43 +147,43 @@
     {
       "id":17,
       "category": "Plastik Kresek",
-      "name": "Rambai Kecil",
+      "name": "Kresek Uk Kecil",
       "satuan": "1pak",
       "price": "4500",
-      "merk": "",
+      "merk": "Rambai",
       "image":""
     },
     {
       "id":18,
       "category": "Plastik Kresek",
-      "name": "Rambai Tanggung",
+      "name": "Kresek Uk Tanggung",
       "satuan": "1pak",
       "price": "4500",
-      "merk": "",
+      "merk": "Rambai",
       "image":""
     },
     {
       "id":19,
       "category": "Plastik Kresek",
-      "name": "Tiger Kecil",
+      "name": "Kresek Uk Kecil",
       "satuan": "1pak",
       "price": "10000",
-      "merk": "",
+      "merk": "Tiger",
       "image":""
     },
     {
       "id":20,
       "category": "Plastik Kresek",
-      "name": "Tiger Tanggung",
+      "name": "Kresek Uk Tanggung",
       "satuan": "1pak",
       "price": "10000",
-      "merk": "",
+      "merk": "Tiger",
       "image":""
     },
     {
       "id":21,
       "category": "Plastik Kresek",
-      "name": "Kantong Kresek Merah UK 28",
+      "name": " Kresek Merah Uk 28",
       "satuan": "1pak",
       "price": "13000",
       "merk": "Phyton",
