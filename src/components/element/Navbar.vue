@@ -12,7 +12,9 @@ import IconSearch from '../icons/IconSearch.vue';
 import { useProduct } from '../../stores/product-store';
 import Checkout from '../element/Chekout.vue'
 import IconMenuVue from '../icons/IconMenu.vue';
-import ListCategory from '../element/ListCategory.vue';
+import IconResetVue from '../icons/IconReset.vue';
+
+
 
 const order = useOrder();
 const product = useProduct()
@@ -70,14 +72,14 @@ function sendMessage() {
 <template>
 
     <div class="p-4 fixed top-0 left-0 w-full bg-primary z-50">
-        <div class="container">
+        <div class="">
             <div class="flex flex-wrap justify-between items-center">
                 <!-- <div class="max-w-40">
                     <Logo class="w-full h-full" @click="$router.push('/')" />
                 </div> -->
                 <router-link to="/" class="text-2xl text-light" @click="product.category = ''"> <span
                         class="font-semibold">Tijar</span>Plastik</router-link>
-                <div class="flex items-center gap-5">
+                <div class="flex items-center gap-4">
                     <button @click="openSearch = !openSearch">
                         <IconSearch class="w-5 h-5 text-light" />
                     </button>
@@ -91,6 +93,7 @@ function sendMessage() {
                     <a href="https://wa.me/6289636192223?text=hallo%20TijarPlastik.." target="_blank">
                         <IconWa class="w-6 h-6 text-light" />
                     </a>
+                    <button @click="product.category = ''"><IconResetVue  class="w-6 h-6 text-light" /></button>
                     <button @click="openCategory = !openCategory">
                         <IconMenuVue class="w-6 h-6 text-light" />
                     </button>
