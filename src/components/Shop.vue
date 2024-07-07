@@ -8,6 +8,17 @@ import IconPrevVue from "./icons/IconPrev.vue";
 const order = useOrder()
 const product = useProduct()
 const category = ref('')
+
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat('id-ID', { 
+    style: 'currency', 
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0 
+}).format(value);
+}
+
+
 </script>
 <template>
     <div class="container">
@@ -23,8 +34,9 @@ const category = ref('')
           <div class="p-6 mb-auto">
             <h4 class="text-lg font-medium">{{ item.name }}</h4>
           </div>
-           <div class="flex justify-between items-center gap-5 p-4 bg-borderlight mt-auto">
-            <span class="font-bold text-brand-1">Rp, {{ item.price }}</span>
+          
+           <div class="flex flex-wrap justify-between items-center gap-5 p-4 bg-borderlight mt-auto">
+            <span class="font-bold text-brand-1">{{formatCurrency(item.price)}}</span>
             <button @click="order.addOrder(item)" class="py-2 px-4 rounded-full bg-brand-1 text-white"> Beli </button>
            </div>
             </div>

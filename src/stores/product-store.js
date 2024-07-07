@@ -8,12 +8,18 @@ const category = ref('');
 const name = ref('');
 const price = ref('');
 const qty = ref(1);
+const jumlah = ref('')
 const search = ref('');
+
+const formatCurrency = (value) => {
+  return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value);
+}
 
 const filteredproducts = computed(() => {
     return products.value.filter(item => {
       item.qty = qty.value,
-      item.jumlah = qty.value * parseFloat(item.price.replace('Rp', '').replace('.', ''))
+       // item.jumlah = qty.value * parseFloat(item.price.replace('Rp', '').replace('.', ''))
+       item.jumlah = qty.value * item.price
       return (
         (!category.value || item.category == category.value) &&
         (!search.value || item.name.toLowerCase().includes(search.value.toLowerCase()))

@@ -10,4 +10,9 @@ const pinia = createPinia()
 
 app.use(pinia)
 app.use(router)
+
+app.config.globalProperties.$formatCurrency = function(value) {
+    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value);
+  }
+
 app.mount('#app')

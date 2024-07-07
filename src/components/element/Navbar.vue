@@ -10,6 +10,7 @@ import PopUpOrder from '../element/PopUpOrder.vue'
 import IconTagVue from '../icons/IconTag.vue';
 import IconSearch from '../icons/IconSearch.vue';
 import { useProduct } from '../../stores/product-store';
+import Checkout from '../element/Chekout.vue'
 
 const order = useOrder();
 const product = useProduct()
@@ -105,60 +106,7 @@ function sendMessage() {
     <!-- popup orders -->
     <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:1528938069. -->
     <div class="p-6 bg-primary text-light fixed top-[60px] left-0 w-full min-h-full z-40" v-if="bukaOrders">
-        <div class="w-full flex justify-end mb-4 container">
-            <button class="p-2 bg-secondary rounded-full" @click="bukaOrders = false">
-                <IconClose />
-            </button>
-        </div>
-        <div class="container">
-            <ul class="flex flex-col divide-y divide-borderlight">
-                <li v-for="(item, index) in order.orders" :key="index" class="flex items-center justify-between gap-4 py-2">
-                    <div class="flex items-center gap-3">
-                        <span>{{ item.name }}</span>
-                        <span class="w-6 h-6 rounded-full flex justify-center items-center bg-secondary">{{ item.qty }}</span>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <span>{{ item.jumlah }}</span>
-                        <button @click="order.removeOrder(item.name)"
-                            class="text-secondary bg-white rounded-full p-1 text-sm">
-                            <IconClose />
-                        </button>
-                        <button
-                            @click="selectedItem = item; showDetail = true; order.editOrder(index, selectedItem); jumlah = item.jumlah; resetQty()">
-                            <IconEditVue />
-                        </button>
-                    </div>
-                </li>
-            </ul>
-            <div class="w-full flex justify-between gap-4 py-5 border-top border-light">
-                <button @click="sendMessage" class="bg-light text-primary py-2 px-5 rounded-full">Pesan</button>  <span class="text-lg">Total: Rp {{ order.getTotalPrice() }}</span>
-            </div>
-            
-        </div>
+       <Checkout />
     </div>
 
-    <!--  Modal edit -->
-    <div v-if="showDetail">
-        <div class="fixed top-20 left-0 w-full flex flex-col justify-center items-center min-screen z-50">
-            <pop-up-order :name="selectedItem.name" :price="selectedItem.price" :qty="selectedItem.qty = qty"
-                :jumlah="selectedItem.jumlah = jumlah * qty">
-                <template #order>
-                    <div class="flex gap-4 items-center justify-between">
-                        <div
-                            class="flex items-center justify-center text-base border border-primary rounded-lg max-w-max text-primary">
-                            <button @click="minQty" class="p-2 border-primary border-r"> - </button>
-                            <input type="number" min="1" v-model="qty" class="w-10 text-center bg-transparent">
-                            <button @click="addQty" class="p-2 border-primary border-l"> + </button>
-                        </div>
-                        <div class="flex gap-4 items-center">
-                            <button @click="showDetail = false" class="bg-secondary text-light py-2 px-5 rounded-full"> Cancel</button>
-                        <button @click="showDetail = false" class="bg-primary text-light py-2 px-5 rounded-full">Ok</button>
-                   
-                        </div>
-                   </div>
-                </template>
-            </pop-up-order>
-        </div>
-    </div>
 </template>
