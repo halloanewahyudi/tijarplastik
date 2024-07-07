@@ -29,7 +29,7 @@ export const useOrder = defineStore('orderan', {
         },
         editOrder(index, order) {
             this.orders[index] = order;
-          //  console.log(order)
+           console.log(order)
         },
         clearOrder() {
             this.orders = [];

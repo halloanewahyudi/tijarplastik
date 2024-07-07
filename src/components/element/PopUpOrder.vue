@@ -31,6 +31,15 @@ const minQty = () => {
     }
 }
 
+const formatCurrency = (value) => {
+    return new Intl.NumberFormat('id-ID', { 
+    style: 'currency', 
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0 
+ }).format(value);
+}
+
 </script>
 <template>
     <div class="max-w-[460px] w-full p-6 mx-auto">
@@ -43,15 +52,17 @@ const minQty = () => {
                 <div class="flex gap-4 items-center justify-between py-2">
                     <span> Merk </span><span> {{ props.merk }}</span>
                 </div>
-                <div class="flex gap-4 items-center justify-between py-2">
-                    <span> Harga</span><span> {{ props.price }}</span>
-                </div>
+                
                 <div class="flex gap-4 items-center justify-between py-2">
                     <span> Banyaknya </span><span>  {{ props.qty }}  </span>
                 </div>
                 <div class="flex gap-4 items-center justify-between py-2">
-                    <span> jumlah</span><span> {{ props.jumlah }}</span>
+                    <span> Harga</span><span class="font-medium"> {{ formatCurrency(props.price)}}</span>
                 </div>
+
+              <!--   <div class="flex gap-4 items-center justify-between py-2">
+                    <span> jumlah</span><span> {{ props.jumlah }}</span>
+                </div> -->
             </div>
             <div class="p-6 bg-brand-2">
                 <slot name="order"></slot>

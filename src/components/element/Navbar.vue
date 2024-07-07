@@ -77,14 +77,14 @@ function sendMessage() {
                   <button @click="openSearch =! openSearch"><IconSearch  class="w-5 h-5 text-light"/></button>
                     <div class="relative">
                         <button @click="bukaOrders = !bukaOrders" v-if="order.orders.length > 0"
-                            class="absolute -top-2 -right-5 w-7 h-7 bg-secondary rounded-full  flex items-center justify-center">
+                            class="absolute -top-2 -right-5 w-7 h-7 bg-secondary text-white rounded-full  flex items-center justify-center">
                             {{ order.orders.length }}
                         </button>
                         <IconCart class="w-6 h-6 text-light" />
                     </div>
                     <div>
                         <a href="https://wa.me/6289636192223?text=hallo%20TijarPlastik.." target="_blank">
-                            <IconWa class="w-5 h-5 text-light" />
+                            <IconWa class="w-6 h-6 text-light" />
                         </a>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ function sendMessage() {
         <div class="container">
             <div class="flex items-center gap-3 ">
                 <input type="search" v-model="product.search" class="p-2 rounded-lg w-full text-brand-1">
-                <button @click="openSearch = false"> <icon-close  class="w-5 h-5"></icon-close></button>
+                <button @click="openSearch = false ; product.search = ''" class="p-2 rounded-full bg-brand-4"> <icon-close  class="w-5 h-5"></icon-close></button>
             </div>
         </div>
     </div>
@@ -106,6 +106,9 @@ function sendMessage() {
     <!-- popup orders -->
     <!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:1528938069. -->
     <div class="p-6 bg-primary text-light fixed top-[60px] left-0 w-full min-h-full z-40" v-if="bukaOrders">
+        <div class="flex justify-end py-2">
+        <button @click="bukaOrders = false" class="bg-brand-4 p-2 rounded-full"> <IconClose class="w-5 h-5"/> </button>
+     </div>
        <Checkout />
     </div>
 

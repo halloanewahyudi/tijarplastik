@@ -29,7 +29,7 @@ const formatCurrency = (value) => {
           </button>
       </ul>
      
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <div v-for="(item,index) in product.paginatedproducts" :key="index" class=" bg-white rounded-lg text-center overflow-hidden h-full flex flex-col justify-between hover:shadow-xl duration-300 ">
           <div class="p-6 mb-auto">
             <h4 class="text-lg font-medium">{{ item.name }}</h4>

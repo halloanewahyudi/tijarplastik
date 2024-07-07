@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, ref ,watchEffect} from "vue";
 import { useOrder } from "../../stores/order-store";
 import {useProduct} from '../../stores/product-store';
 import IconCloseVue from "../icons/IconClose.vue";
@@ -12,9 +12,9 @@ const selectIndex = ref()
 const jumlah =ref(0)
 const qty = ref(1)
 
-const editQty = ()=>{
-    selected.value.qty = qty.value
-    selected.value.jumlah = selected.value.price * selected.value.qty
+const editQty = (item)=>{
+    item.qty = qty.value
+    item.jumlah = item.price * item.qty
 }
 
 const addQty = () => {
@@ -51,17 +51,22 @@ const cancel = () =>{
   
 }
 
-
 function formatMessage(data) {
     let message = "Pesanan:\n\n";
     for (const item of data) {
-        message += `${item.name}: Rp ${item.price}\n`;
+        message += `${item.name}: ${item.qty}  Rp ${item.jumlah}\n`;
     }
     //  const total = data.reduce((sum, item) => sum + item.price, 0);
-    const total = formatCurrency( getTotal)
+    const total = formatCurrency( getTotal.value)
     message += `\nTotal: Rp ${total}`;
     return message;
 }
+
+watchEffect(()=>{
+    qty.value
+    jumlah.value
+    order.orders.price = selected.value.jumlah 
+})
 
 function sendMessage() {
     const data = order.orders
@@ -91,27 +96,32 @@ function sendMessage() {
             </li>
         </ul>
         <div class="flex justify-between items-center">
+            <div class="flex gap-4 items-center gap-4">
+                <button class="bg-brand-4 py-2 px-5 rounded-full" @click="order.clearOrder"> Clear</button>
             <button @click="sendMessage" class="bg-light text-primary py-2 px-5 rounded-full">Pesan</button>
-            <div class="text-secondary text-xl"> {{ formatCurrency( getTotal) }} </div> 
+          
+            </div>
+  <div class="text-secondary text-xl"> {{ formatCurrency( getTotal) }} </div> 
+         
         </div>
     </div>
     <!--    Selected -->
     
     <div v-if="bukaEdit">
-        <div class="fixed top-[70px] left-0 w-full bg-brand-1 flex flex-col justify-center items-center z-50">
-        <pop-up-order :name="selected.name" :price="selected.price" :qty="selected.qty = qty"
-                :jumlah="selected.jumlah = selected.price * qty">
+        <div class="fixed top-[60px] left-0 w-full bg-brand-1 flex flex-col justify-center items-center z-50">
+        <pop-up-order :name="selected.name" :price=" selected.jumlah" :qty="selected.qty = qty"
+                :jumlah="selected.jumlah = selected.price * selected.qty">
                 <template #order>
                     <div class="flex gap-4 items-center justify-between">
                         <div
                             class="flex items-center justify-center text-base border border-primary rounded-lg max-w-max text-primary">
                             <button @click="minQty" class="p-2 border-primary border-r"> - </button>
-                            <input @input="editQty" type="number" min="1" v-model="qty" class="w-10 text-center bg-transparent">
+                            <input @input="editQty(selected)" type="number" min="1" v-model="qty" class="w-10 text-center bg-transparent">
                             <button @click="addQty" class="p-2 border-primary border-l"> + </button>
                         </div>
                         <div class="flex gap-4 items-center">
                             <button @click="cancel" class="bg-secondary text-light py-2 px-5 rounded-full"> Cancel</button>
-                        <button @click="bukaEdit = false ;" class="bg-primary text-light py-2 px-5 rounded-full">Ok</button>
+                        <button @click="bukaEdit = false ; console.log(order.orders)" class="bg-primary text-light py-2 px-5 rounded-full">Ok</button>
                         </div>
                    </div>
                 </template>
