@@ -71,7 +71,7 @@ watchEffect(()=>{
 function sendMessage() {
     const data = order.orders
     const message = formatMessage(data);
-    const phoneNumber = '628979134998'; // Ganti dengan nomor WhatsApp tujuan
+    const phoneNumber = '6289636192223'; // Ganti dengan nomor WhatsApp tujuan
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
