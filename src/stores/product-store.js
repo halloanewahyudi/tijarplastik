@@ -13,7 +13,7 @@ const search = ref('');
 const filteredproducts = computed(() => {
     return products.value.filter(item => {
       item.qty = qty.value,
-        item.jumlah = qty.value * parseFloat(item.price.replace('Rp', '').replace('.', ''))
+      item.jumlah = qty.value * parseFloat(item.price.replace('Rp', '').replace('.', ''))
       return (
         (!category.value || item.category == category.value) &&
         (!search.value || item.name.toLowerCase().includes(search.value.toLowerCase()))
@@ -23,7 +23,7 @@ const filteredproducts = computed(() => {
 
   
 // Pagination logic
-const itemsPerPage = 10;
+const itemsPerPage = 12;
 const currentPage = ref(1);
 
 const paginatedproducts = computed(() => {
@@ -56,6 +56,7 @@ const uniqueItems = [
 return {
     products,
     filteredproducts,
+    name,
     category,
     search,
     qty,
@@ -65,7 +66,8 @@ return {
     itemsPerPage,
     currentPage, 
     prevPage,
-    nextPage
+    nextPage,
+    uniqueItems
 }
 
 })
