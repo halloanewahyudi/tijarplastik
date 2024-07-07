@@ -56,7 +56,7 @@ const nextPage = () => {
 
 //mengambil katagor
 const uniqueItems = [
-  ...new Map(paginatedproducts.value.map(item => [item.category, item])).values()
+  ...new Map(filteredproducts.value.map(item => [item.category, item])).values()
 ];
 
 return {

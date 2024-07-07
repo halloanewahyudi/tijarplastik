@@ -39,7 +39,7 @@ const formatCurrency = (value) => {
             </div>
             <div class="flex gap-3 py-2 justify-between items-center">
               <span>Satuan</span>
-              <span> {{ item.amount }}</span>
+              <span> {{ item.satuan }}</span>
             </div>
           </div>
           
@@ -52,7 +52,7 @@ const formatCurrency = (value) => {
 
         <div class="flex gap-3 items-center justify-center py-10 container">
         <button class="flex items-center gap-3 disabled:opacity-30" @click="product.prevPage" :disabled="product.currentPage === 1"> <IconPrevVue/> Prev </button>
-        <button class="flex items-center gap-3 disabled:opacity-30" @click="product.nextPage" :disabled="product.currentPage === totalPages"> Next <IconNextVue/> </button>
+        <button class="flex items-center gap-3 disabled:opacity-30" @click="product.nextPage" :disabled="product.currentPage === product.totalPages"> Next <IconNextVue/> </button>
       </div>
     </div>
 </template>

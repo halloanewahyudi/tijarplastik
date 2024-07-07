@@ -3,176 +3,235 @@
       "id":1,
       "category": "Styrofoam",
       "name": "Styrofoam Bubur",
-      "amount": "1bal isi 100",
+      "satuan": "1bal isi 100",
       "price": "25000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":2,
       "category": "Styrofoam",
       "name": "Styrofoam mie/sakura",
-      "amount": "1bal isi 200",
+      "satuan": "1bal isi 200",
       "price": "44000",
-      "merk": ""
+      "merk": "",
+      "image":""
+
     },
     {
       "id":3,
       "category": "Styrofoam",
       "name": "Styrofoam mangkok",
-      "amount": "1bal isi 100",
+      "satuan": "1bal isi 100",
       "price": "28000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":4,
       "category": "Plastik",
       "name": "Plastik Benig 1kg",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": "Tomat"
+      "merk": "Tomat",
+      "image":""
     },
     {
       "id":5,
       "category": "Plastik",
       "name": "Plastik Benig 1/4kg",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": "Tomat"
+      "merk": "Tomat",
+      "image":""
     },
     {
       "id":5,
       "category": "Plastik",
       "name": "Plastik Benig Sambel / es mambo 4x23",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": "Tomat"
+      "merk": "Tomat",
+      "image":""
     },
     {
       "id":7,
       "category": "Plastik",
       "name": "Plastik Benig Sambel / es mambo 6x10",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": "Tomat"
+      "merk": "Tomat",
+      "image":""
     },
     {
       "id":8,
       "category": "Plastik",
       "name": "Plastik Benig 1kg",
-      "amount": "1pak",
-      "price": "5000",
-      "merk": "Bisbul"
+      "satuan": "1pak",
+      "price": "4500",
+      "merk": "Bisbul",
+      "image":""
     },
     {
       "id":9,
       "category": "Plastik",
       "name": "Plastik Benig 1/2kg",
-      "amount": "1pak",
-      "price": "5000",
-      "merk": "Bisbul"
+      "satuan": "1pak",
+      "price": "4500",
+      "merk": "Bisbul",
+      "image":""
     },
     {
       "id":10,
       "category": "Plastik",
       "name": "Plastik Benig 1/4kg panjang",
-      "amount": "1pak",
-      "price": "5000",
-      "merk": "Bisbul"
+      "satuan": "1pak",
+      "price": "4500",
+      "merk": "Bisbul",
+      "image":""
     },
     {
       "id":11,
       "category": "Plastik",
       "name": "Plastik Benig 1/4kg pendek",
-      "amount": "1pak",
-      "price": "5000",
-      "merk": "Bisbul"
+      "satuan": "1pak",
+      "price": "4500",
+      "merk": "Bisbul",
+      "image":""
     },
     { 
       "id":12,
       "category": "Plastik",
       "name": "Plastik Klip uk 5x8",
-      "amount": "1pak isi 100",
+      "satuan": "1pak isi 100",
       "price": "3000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":13,
       "category": "Plastik",
       "name": "Plastik Klip uk 6x10",
-      "amount": "1pak isi 100",
+      "satuan": "1pak isi 100",
       "price": "3500",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":14,
       "category": "Plastik",
       "name": "Plastik Klip uk 7x10",
-      "amount": "1pak isi 100",
+      "satuan": "1pak isi 100",
       "price": "5000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":15,
       "category": "Plastik",
       "name": "Plastik Klip uk 8x12",
-      "amount": "1pak isi 100",
+      "satuan": "1pak isi 100",
       "price": "6000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":16,
       "category": "Plastik",
       "name": "Plastik Klip uk 10x15",
-      "amount": "1pak isi 100",
+      "satuan": "1pak isi 100",
       "price": "8500",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":17,
-      "category": "Platik Kresek",
+      "category": "Plastik Kresek",
       "name": "Rambai Kecil",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "4500",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":18,
-      "category": "Platik Kresek",
+      "category": "Plastik Kresek",
       "name": "Rambai Tanggung",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "4500",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":19,
-      "category": "Platik Kresek",
+      "category": "Plastik Kresek",
       "name": "Tiger Kecil",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":20,
-      "category": "Platik Kresek",
+      "category": "Plastik Kresek",
       "name": "Tiger Tanggung",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "",
+      "image":""
     },
     {
       "id":21,
-      "category": "Platik Kresek",
-      "name": "Phyton Merah UK 28",
-      "amount": "1pak",
+      "category": "Plastik Kresek",
+      "name": "Kantong Kresek Merah UK 28",
+      "satuan": "1pak",
       "price": "13000",
-      "merk": ""
+      "merk": "Phyton",
+      "image":""
     },
     {
       "id":22,
-      "category": "Platik Kresek",
+      "category": "Plastik Kresek",
       "name": "Kantong Cup",
-      "amount": "1pak",
+      "satuan": "1pak",
       "price": "4000",
-      "merk": ""
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":23,
+      "category": "Cup",
+      "name": "Cup 22 OZ",
+      "satuan": "1pak/50pc",
+      "price": "17000",
+      "merk": "Prima Cup",
+      "image":""
+    },
+    {
+      "id":24,
+      "category": "Cup",
+      "name": "Cup 16 OZ",
+      "satuan": "1pak/ 50pc",
+      "price": "8500",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":25,
+      "category": "Cup",
+      "name": "Cup 14 OZ",
+      "satuan": "1pak/ 50pc",
+      "price": "8500",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":26,
+      "category": "Cup",
+      "name": "Cup 12 OZ",
+      "satuan": "1pak/ 50pc",
+      "price": "8500",
+      "merk": "Wita Cup",
+      "image":""
     }
   ]

@@ -96,7 +96,7 @@ function sendMessage() {
             </li>
         </ul>
         <div class="flex justify-between items-center">
-            <div class="flex gap-4 items-center gap-4">
+            <div class="flex items-center gap-4">
                 <button class="bg-brand-4 py-2 px-5 rounded-full" @click="order.clearOrder"> Clear</button>
             <button @click="sendMessage" class="bg-light text-primary py-2 px-5 rounded-full">Pesan</button>
           
