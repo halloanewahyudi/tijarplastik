@@ -2,7 +2,7 @@
     {
       "id":1,
       "category": "Styrofoam",
-      "name": "Str Bubur",
+      "name": "Styrofoam Bubur",
       "amount": "1bal isi 100",
       "price": "25000",
       "merk": ""
@@ -10,7 +10,7 @@
     {
       "id":2,
       "category": "Styrofoam",
-      "name": "Str mie/sakura",
+      "name": "Styrofoam mie/sakura",
       "amount": "1bal isi 200",
       "price": "44000",
       "merk": ""
@@ -18,7 +18,7 @@
     {
       "id":3,
       "category": "Styrofoam",
-      "name": "Str mangkok",
+      "name": "Styrofoam mangkok",
       "amount": "1bal isi 100",
       "price": "28000",
       "merk": ""
@@ -26,66 +26,66 @@
     {
       "id":4,
       "category": "Plastik",
-      "name": "Plastik Benig 1kg (tomat)",
+      "name": "Plastik Benig 1kg",
       "amount": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "Tomat"
     },
     {
       "id":5,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg (tomat)",
+      "name": "Plastik Benig 1/4kg",
       "amount": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "Tomat"
     },
     {
       "id":5,
       "category": "Plastik",
-      "name": "Plastik Benig Sambel / es mambo 4x23 (tomat)",
+      "name": "Plastik Benig Sambel / es mambo 4x23",
       "amount": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "Tomat"
     },
     {
       "id":7,
       "category": "Plastik",
-      "name": "Plastik Benig Sambel / es mambo 6x10 (tomat)",
+      "name": "Plastik Benig Sambel / es mambo 6x10",
       "amount": "1pak",
       "price": "10000",
-      "merk": ""
+      "merk": "Tomat"
     },
     {
       "id":8,
       "category": "Plastik",
-      "name": "Plastik Benig 1kg (Bisbul)",
+      "name": "Plastik Benig 1kg",
       "amount": "1pak",
       "price": "5000",
-      "merk": ""
+      "merk": "Bisbul"
     },
     {
       "id":9,
       "category": "Plastik",
-      "name": "Plastik Benig 1/2kg (Bisbul)",
+      "name": "Plastik Benig 1/2kg",
       "amount": "1pak",
       "price": "5000",
-      "merk": ""
+      "merk": "Bisbul"
     },
     {
       "id":10,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg panjang  (Bisbul)",
+      "name": "Plastik Benig 1/4kg panjang",
       "amount": "1pak",
       "price": "5000",
-      "merk": ""
+      "merk": "Bisbul"
     },
     {
       "id":11,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg pendek (Bisbul)",
+      "name": "Plastik Benig 1/4kg pendek",
       "amount": "1pak",
       "price": "5000",
-      "merk": ""
+      "merk": "Bisbul"
     },
     { 
       "id":12,
