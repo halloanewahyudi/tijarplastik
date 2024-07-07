@@ -19,8 +19,8 @@ export const useOrder = defineStore('orderan', {
             //  return this.orders.reduce((total, order) => total + order.price, 0)
             // return this.orders.reduce((total, order) => total + parseInt(order.price), 0)
              // return this.orders.reduce((total, order) => total + parseFloat(order.price), 0)
-            return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp',"")), 0)
-      //   return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp', '').replace('.', '')), 0)
+           // return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp',"")), 0)
+        return this.orders.reduce((total, order) => total + parseFloat(order.price.replace('Rp', '').replace('.', '')), 0)
          
           },
 
@@ -29,6 +29,7 @@ export const useOrder = defineStore('orderan', {
         },
         editOrder(index, order){
             this.orders[index] = order;
+            console.log(order)
         },
         clearOrder(){
             this.orders = [];

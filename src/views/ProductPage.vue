@@ -31,18 +31,6 @@ const filteredproducts = computed(() => {
   });
 });
 
-const addQty = () => {
-    qty.value++
-}
-const minQty = () => {
-    if (qty.value <= 1) {
-        qty.value = 1
-    } else {
-        qty.value -= 1
-    }
-
-}
-
 // Pagination logic
 const itemsPerPage = 12;
 const currentPage = ref(1);
@@ -74,19 +62,38 @@ const uniqueItems = [
   ...new Map(paginatedproducts.value.map(item => [item.category, item])).values()
 ];
 
+const addQty = () => {
+  qty.value++
+}
+const minQty = () => {
+  if (qty.value <= 1) {
+    qty.value = 1
+  } else {
+    qty.value -= 1
+  }
+}
+
 // item terselect untuk popup
 const showDetail = ref(false);
-const showTutup = () =>{
-   setTimeout(() => {
+const showTutup = () => {
+  setTimeout(() => {
     showDetail.value = false
-   input.value.val = 1
-   }, 300);
+    input.value.val = 1
+  }, 300);
 }
 
 
 const selectedItem = ref({});
 watch(qty, (newval) => {
   qty.value = newval
+})
+
+const netral = () => {
+  qty.value = 1;
+}
+
+watchEffect(() => {
+  netral()
 })
 
 </script>
@@ -108,17 +115,15 @@ watch(qty, (newval) => {
         </div>
       </div> <!-- end filter wrap -->
 
-        <!--   ########### LIST ProDUK ############ -->
+      <!--   ########### LIST ProDUK ############ -->
 
       <div class="flex flex-col divide-y divide-borderlight">
         <list-item class="py-2 group" v-for="(item, index) in paginatedproducts" :key="index" :name="item.name"
-          :price="item.price" :category="item.category" :merk="item.merk"
-          :qty="item.qty" :jumlah="item.jumlah">
-          <button @click="showDetail = true; selectedItem = item; " class="bg-brand-2 text-primary rounded-lg py-2 px-3 group-hover:bg-light"> Order</button>
+          :price="item.price" :category="item.category" :merk="item.merk" :qty="item.qty" :jumlah="item.jumlah">
+          <button @click="order.addOrder(item)"
+            class="bg-brand-2 text-primary rounded-lg py-2 px-3 group-hover:bg-light"> Order</button>
         </list-item>
       </div>
-
-
       <div class="flex gap-3 items-center pt-10">
         <button class="" @click="prevPage" :disabled="currentPage === 1">Previous</button>
         <button class="" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
@@ -126,10 +131,8 @@ watch(qty, (newval) => {
 
     </div>
   </div>
-
   <!--   ###########POPUP tesr select ############ -->
   <div v-if="showDetail">
-
     <pop-up-order :id="selectedItem.id" :name="selectedItem.name"
       :price="parseFloat(selectedItem.price.replace('Rp', '').replace('.', '')) * qty" :jumlah="selectedItem.jumlah">
       <template #close>
@@ -138,14 +141,17 @@ watch(qty, (newval) => {
         </button>
       </template>
       <template #order>
+        {{ qty }} <br>
+        {{ order.orders }}
         <div class="flex gap-4 items-center justify-between">
-          <div class="flex items-center justify-center text-base border border-primary rounded-lg max-w-max text-primary">
-                        <button @click="minQty" class="p-2 border-primary border-r"> - </button>
-                        <input type="number" min="1" v-model="qty" class="w-10 text-center bg-transparent">
-                        <button @click="addQty" class="p-2 border-primary border-l"> + </button>
-                    </div>
-       
-          <button @click="order.addOrder(selectedItem) ; showTutup()" class="bg-primary text-light py-2 px-5 rounded-full">Order</button>
+          <div
+            class="flex items-center justify-center text-base border border-primary rounded-lg max-w-max text-primary">
+            <button @click="minQty" class="p-2 border-primary border-r"> - </button>
+            <input type="number" min="1" v-model="qty" class="w-10 text-center bg-transparent">
+            <button @click="addQty" class="p-2 border-primary border-l"> + </button>
+          </div>
+          <button @click="order.addOrder(selectedItem); showTutup()"
+            class="bg-primary text-light py-2 px-5 rounded-full"> Order</button>
         </div>
       </template>
     </pop-up-order>

@@ -13,7 +13,7 @@
 }
 
 body{
- @apply bg-light pt-20
+ @apply bg-light pt-[60px]
 }
 
 input::-webkit-outer-spin-button,

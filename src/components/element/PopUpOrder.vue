@@ -20,29 +20,44 @@ const props = defineProps({
 const jumlah = ref(1)
 const order = useOrder()
 
+const addQty = () => {
+    props.qty++
+}
+const minQty = () => {
+    if (props.qty <= 1) {
+        props.qty = 1
+    } else {
+        props.qty -= 1
+    }
+}
+
 </script>
 <template>
-    <div class="fixed top-0 left-0 w-full h-full bg-primary flex flex-col justify-center items-center">
-        <div class="max-w-[460px] w-full p-6">
-
-            <div class="rounded-lg overflow-hidden  bg-light text-primary flex flex-col   w-full shadow-2xl">
-                <div class="flex flex-col divide-y divide-borderlight mb-5 p-6">
-                    <div class="flex gap-4 items-center justify-between py-2">
-                        <span class="text-lg font-medium"> {{ props.name }}</span>
-                        <slot name="close"></slot>
-                    </div>
-                    <div class="flex gap-4 items-center justify-between py-2">
-                        <span> Merk </span><span> {{ props.merk }}</span>
-                    </div>
-                    <div class="flex gap-4 items-center justify-between py-2">
-                        <span> Harga</span><span> {{ props.price }}</span>
-                    </div>
+    <div class="max-w-[460px] w-full p-6 mx-auto">
+        <div class="rounded-lg overflow-hidden  bg-light text-primary flex flex-col   w-full shadow-2xl">
+            <div class="flex flex-col divide-y divide-borderlight mb-5 p-6">
+                <div class="flex gap-4 items-center justify-between py-2">
+                    <span class="text-lg font-medium"> {{ props.name }}</span>
+                    <slot name="close"></slot>
                 </div>
-                <div class="p-6 bg-brand-2">
-                    <slot  name="order"></slot>
+                <div class="flex gap-4 items-center justify-between py-2">
+                    <span> Merk </span><span> {{ props.merk }}</span>
                 </div>
-                
+                <div class="flex gap-4 items-center justify-between py-2">
+                    <span> Harga</span><span> {{ props.price }}</span>
+                </div>
+                <div class="flex gap-4 items-center justify-between py-2">
+                    <span> Banyaknya </span><span>  {{ props.qty }}  </span>
+                </div>
+                <div class="flex gap-4 items-center justify-between py-2">
+                    <span> jumlah</span><span> {{ props.jumlah }}</span>
+                </div>
             </div>
+            <div class="p-6 bg-brand-2">
+                <slot name="order"></slot>
+            </div>
+
         </div>
     </div>
+
 </template>
