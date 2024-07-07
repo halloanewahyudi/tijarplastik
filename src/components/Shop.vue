@@ -22,13 +22,7 @@ const formatCurrency = (value) => {
 </script>
 <template>
     <div class="container">
-      <ul class="flex flex-wrap justify-center items-center gap-3  pb-10">
-          <button  @click="product.category = '' ; product.currentPage = 1" class="py-2 px-4 rounded-lg bg-borderlight" > Semua </button>
-          <button v-for="item in product.uniqueItems" :key="item"  @click="product.category = item.category"  class="py-2 px-4 rounded-lg bg-borderlight">
-            {{ item.category }}
-          </button>
-      </ul>
-     
+      
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <div v-for="(item,index) in product.paginatedproducts" :key="index" class=" bg-white rounded-lg text-center overflow-hidden h-full flex flex-col justify-between hover:shadow-xl duration-300 ">
           <div class="p-6  flex flex-col divide-y divide-borderlight">
