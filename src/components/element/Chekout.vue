@@ -30,6 +30,12 @@ const minQty = () => {
     }
 }
 
+const resetQty = () => {
+    if (qty.value > 1) {
+            qty.value = 1
+    }
+}
+
 const formatCurrency = (value) => {
     return new Intl.NumberFormat('id-ID', {
         style: 'currency',
@@ -83,8 +89,9 @@ function sendMessage() {
     }, 3000);
 }
 </script>
-<template>
+<template> 
     <div>
+      <!--   list order -->
         <ul class="flex flex-col divide-y divide-borderlight mb-2">
             <li class="flex justify-between items-center py-2" v-for="(item, index) in order.orders" :key="index">
                 <div class="flex gap-4 items-center">
@@ -93,7 +100,7 @@ function sendMessage() {
                 </div>
                 <div class="flex gap-4 items-center">
                     <span> {{ formatCurrency(item.jumlah) }} </span>
-                    <button @click=" selected = item; selectIndex = index; bukaEdit = true; jumlah = item.jumlah">
+                    <button @click=" selected = item; selectIndex = index; bukaEdit = true; jumlah = item.jumlah; resetQty()">
                         <IconEditVue />
                     </button>
                     <button @click="order.removeOrder(item.name)">
@@ -102,6 +109,8 @@ function sendMessage() {
                 </div>
             </li>
         </ul>
+
+       <!--  tombol pesan -->
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <button class="bg-brand-4 py-2 px-5 rounded-full" @click="order.clearOrder"> Clear</button>
@@ -113,6 +122,7 @@ function sendMessage() {
     </div>
     <!--    Selected -->
 
+    <!-- buka edit -->
     <div v-if="bukaEdit">
         <div class="fixed top-[60px] left-0 w-full bg-brand-1 flex flex-col justify-center items-center z-50">
             <pop-up-order :name="selected.name" :price="selected.jumlah" :qty="selected.qty = qty"
@@ -129,7 +139,7 @@ function sendMessage() {
                         <div class="flex gap-4 items-center">
                             <button @click="cancel" class="bg-secondary text-light py-2 px-5 rounded-full">
                                 Cancel</button>
-                            <button @click="bukaEdit = false; console.log(order.orders)"
+                            <button @click="bukaEdit = false"
                                 class="bg-primary text-light py-2 px-5 rounded-full">Ok</button>
                         </div>
                     </div>
