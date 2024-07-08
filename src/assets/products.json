@@ -30,7 +30,7 @@
     {
       "id":4,
       "category": "Plastik",
-      "name": "Plastik Benig 1kg",
+      "name": "Plastik Bening 1kg",
       "satuan": "1pak",
       "price": "10000",
       "merk": "Tomat",
@@ -39,7 +39,7 @@
     {
       "id":5,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg",
+      "name": "Plastik Bening 1/4kg",
       "satuan": "1pak",
       "price": "10000",
       "merk": "Tomat",
@@ -48,7 +48,7 @@
     {
       "id":5,
       "category": "Plastik",
-      "name": "Plastik Benig Sambel / es mambo 4x23",
+      "name": "Plastik Bening Sambel / es mambo 4x23",
       "satuan": "1pak",
       "price": "10000",
       "merk": "Tomat",
@@ -57,7 +57,7 @@
     {
       "id":7,
       "category": "Plastik",
-      "name": "Plastik Benig Sambel / es mambo 6x10",
+      "name": "Plastik Bening Sambel / es mambo 6x10",
       "satuan": "1pak",
       "price": "10000",
       "merk": "Tomat",
@@ -66,7 +66,7 @@
     {
       "id":8,
       "category": "Plastik",
-      "name": "Plastik Benig 1kg",
+      "name": "Plastik Bening 1kg",
       "satuan": "1pak",
       "price": "4500",
       "merk": "Bisbul",
@@ -75,7 +75,7 @@
     {
       "id":9,
       "category": "Plastik",
-      "name": "Plastik Benig 1/2kg",
+      "name": "Plastik Bening 1/2kg",
       "satuan": "1pak",
       "price": "4500",
       "merk": "Bisbul",
@@ -84,7 +84,7 @@
     {
       "id":10,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg panjang",
+      "name": "Plastik Bening 1/4kg panjang",
       "satuan": "1pak",
       "price": "4500",
       "merk": "Bisbul",
@@ -93,7 +93,7 @@
     {
       "id":11,
       "category": "Plastik",
-      "name": "Plastik Benig 1/4kg pendek",
+      "name": "Plastik Bening 1/4kg pendek",
       "satuan": "1pak",
       "price": "4500",
       "merk": "Bisbul",
