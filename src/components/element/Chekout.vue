@@ -82,8 +82,6 @@ function sendMessage() {
         sudahOrder.value = true
     }, 3000);
 }
-
-
 </script>
 <template>
     <div>
@@ -150,7 +148,7 @@ function sendMessage() {
             </template>
 
             <template #clear>
-                <button @click="order.clearOrder" class="py-2 px-5 rounded-full bg-brand-1 text-brand-2"> Hapus Order
+                <button @click="order.clearOrder ; sudahOrder = false" class="py-2 px-5 rounded-full bg-brand-1 text-brand-2"> Hapus Order
                 </button>
             </template>
         </popup-clear-order>

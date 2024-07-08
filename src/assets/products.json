@@ -233,5 +233,150 @@
       "price": "8500",
       "merk": "Wita Cup",
       "image":""
+    },
+    {
+      "id":27,
+      "category": "Mika",
+      "name": "Mika Uk gabin",
+      "satuan": "1pak/ 100pc",
+      "price": "8000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":28,
+      "category": "Mika",
+      "name": "Mika GX-3 ",
+      "satuan": "1pak/ 100pc",
+      "price": "22000",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":29,
+      "category": "Mika",
+      "name": "Mika 3-X ",
+      "satuan": "1pak/ 100pc",
+      "price": "22000",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":30,
+      "category": "Mika",
+      "name": "Mika 4-X ",
+      "satuan": "1pak/ 100pc",
+      "price": "15000",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":31,
+      "category": "Mika",
+      "name": "Mika 5-X ",
+      "satuan": "1pak/ 100pc",
+      "price": "11000",
+      "merk": "D One",
+      "image":""
+    },
+    {
+      "id":32,
+      "category": "Kertas",
+      "name": "Kertas nasi ",
+      "satuan": "1pak/ 100lbr",
+      "price": "10000",
+      "merk": "Kuliner",
+      "image":""
+    },
+    {
+      "id":33,
+      "category": "Kertas",
+      "name": "Kertas nasi ",
+      "satuan": "1pak/ 40lbr",
+      "price": "5000",
+      "merk": "Kuliner",
+      "image":""
+    },
+    {
+      "id":34,
+      "category": "Kertas",
+      "name": "Kertas Alas kembang",
+      "satuan": "1pak/ 250lbr",
+      "price": "21000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":35,
+      "category": "Kertas",
+      "name": "Kertas KFC",
+      "satuan": "1pak/ 100lbr",
+      "price": "8500",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":36,
+      "category": "Sedotan",
+      "name": "Sedotan Biasa",
+      "satuan": "1 ikat (isi 5)",
+      "price": "3000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":37,
+      "category": "Sedotan",
+      "name": "Sedotan Flexible",
+      "satuan": "1 bungkus",
+      "price": "1500",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":38,
+      "category": "Sedotan",
+      "name": "Sedotan Boba",
+      "satuan": "1 bungkus",
+      "price": "10000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":39,
+      "category": "Mika",
+      "name": "Mika Bolu Uk 1A",
+      "satuan": "1 pc",
+      "price": "1500",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":40,
+      "category": "Mika",
+      "name": "Mika Jumbo 1",
+      "satuan": "1 pc",
+      "price": "2000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":41,
+      "category": "Mika",
+      "name": "Mika Bolu Bulat Besar ",
+      "satuan": "1 pc",
+      "price": "2000",
+      "merk": "",
+      "image":""
+    },
+    {
+      "id":42,
+      "category": "Mika",
+      "name": "Mika Bolu Bulat Kecil ",
+      "satuan": "1 pc",
+      "price": "1500",
+      "merk": "",
+      "image":""
     }
+    
   ]
