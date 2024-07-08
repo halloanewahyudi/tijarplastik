@@ -35,6 +35,11 @@ const slideContent = [
         title: 'Aneka macam Plastik',
         subtitle: 'Plastik ukuran 1Kg, 1/2, 1/4, Plasitk clip berbagai ukuran , kantong kresek juga berbagai ukuuran',
         image: 'img/slide-6.jpeg'
+    },
+    {
+        title: 'Aneka Bahan Kue',
+        subtitle: 'Agar-agar, keju, coklat messes, coklat batangan , tepung , gula , susu, vanila dll',
+        image: 'img/slide-7.jpeg'
     }
 ]
 

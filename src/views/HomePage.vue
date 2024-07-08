@@ -1,12 +1,8 @@
 <script setup>
 import Slideshow from '../components/Slideshow.vue';
-import { useProduct } from '../stores/product-store';
 import Shop from '../components/Shop.vue';
-import Chekout from '../components/element/Chekout.vue';
-const product = useProduct()
 </script>
 <template>
-
     <Slideshow />
     <div class="py-16">
         <Shop />
