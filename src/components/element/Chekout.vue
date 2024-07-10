@@ -32,7 +32,7 @@ const minQty = () => {
 
 const resetQty = () => {
     if (qty.value > 1) {
-            qty.value = 1
+        qty.value = 1
     }
 }
 
@@ -89,9 +89,9 @@ function sendMessage() {
     }, 3000);
 }
 </script>
-<template> 
+<template>
     <div>
-      <!--   list order -->
+        <!--   list order -->
         <ul class="flex flex-col divide-y divide-borderlight mb-2">
             <li class="flex justify-between items-center py-2" v-for="(item, index) in order.orders" :key="index">
                 <div class="flex gap-4 items-center">
@@ -100,22 +100,22 @@ function sendMessage() {
                 </div>
                 <div class="flex gap-4 items-center">
                     <span> {{ formatCurrency(item.jumlah) }} </span>
-                    <button @click=" selected = item; selectIndex = index; bukaEdit = true; jumlah = item.jumlah; resetQty()">
+                    <button
+                        @click=" selected = item; selectIndex = index; bukaEdit = true; jumlah = item.jumlah; resetQty()">
                         <IconEditVue />
                     </button>
-                    <button @click="order.removeOrder(item.name)">
+                    <button @click="order.removeOrder(item.id)">
                         <IconCloseVue />
                     </button>
                 </div>
             </li>
         </ul>
 
-       <!--  tombol pesan -->
+        <!--  tombol pesan -->
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <button class="bg-brand-4 py-2 px-5 rounded-full" @click="order.clearOrder"> Clear</button>
-                <button @click="sendMessage"
-                    class="bg-light text-primary py-2 px-5 rounded-full">Pesan</button>
+                <button @click="sendMessage" class="bg-light text-primary py-2 px-5 rounded-full">Pesan</button>
             </div>
             <div class="text-secondary text-xl"> {{ formatCurrency(getTotal) }} </div>
         </div>
@@ -158,7 +158,8 @@ function sendMessage() {
             </template>
 
             <template #clear>
-                <button @click="order.clearOrder ; sudahOrder = false" class="py-2 px-5 rounded-full bg-brand-1 text-brand-2"> Hapus Order
+                <button @click="order.clearOrder; sudahOrder = false"
+                    class="py-2 px-5 rounded-full bg-brand-1 text-brand-2"> Hapus Order
                 </button>
             </template>
         </popup-clear-order>

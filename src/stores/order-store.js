@@ -12,7 +12,7 @@ export const useOrder = defineStore('orderan', {
             this.orders.push(order);
         },
         removeOrder(index) {
-            this.orders = this.orders.filter(order => order.name !== index);
+            this.orders = this.orders.filter(order => order.id !== index);
         },
 
         getTotalPrice() {
