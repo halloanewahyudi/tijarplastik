@@ -10,7 +10,10 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component:() => import('../views/HomePage.vue')
+      component:() => import('../views/HomePage.vue'),
+      meta:{
+        description:'menjual berbagaimacam plastik dan bahan kue'
+      }
     },
     {
       path: '/product',
